@@ -27,7 +27,7 @@ class Splash : AppCompatActivity() {
             mTransition.startTransition(2000)
         },1000)
         handler.postDelayed({
-            val intent = Intent(baseContext,MainActivity::class.java)
+            val intent = Intent(baseContext,LogIn::class.java)
             startActivity(intent)
             finish()
         },3000)

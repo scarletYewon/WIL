@@ -7,10 +7,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
-class logIn : AppCompatActivity() {
+class LogIn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_log_in)
 
         val id = findViewById<EditText>(R.id.inputid)
         val password = findViewById<EditText>(R.id.inputpassword)
@@ -36,7 +36,7 @@ class logIn : AppCompatActivity() {
         val btnSignup = findViewById<Button>(R.id.btn_signup)
         btnSignup.setOnClickListener {
             Toast.makeText(this, "회원가입 화면으로 이동합니다.", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, signUp::class.java)
+            val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
     }

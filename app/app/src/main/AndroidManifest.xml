@@ -13,10 +13,10 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="33">
         <activity
-            android:name=".signUp"
+            android:name=".SignUp"
             android:exported="false" />
         <activity
-            android:name=".logIn"
+            android:name=".LogIn"
             android:exported="false" />
         <activity
             android:name=".Splash"

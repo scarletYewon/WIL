@@ -4,15 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".logIn">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="199dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
+    <EditText
+        android:id="@+id/inputid"
+        android:layout_width="304dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text"
+        android:elevation="5dp"
+        android:textSize="15dp"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:hint="아이디를 입력해주세요."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <EditText
+        android:id="@+id/inputpassword"
+        android:layout_width="304dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text"
+        android:elevation="5dp"
+        android:textSize="15dp"
+        android:inputType="textPassword"
+        android:paddingStart="10dp"
+        android:hint="비밀번호를 입력해주세요."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputid" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="304dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:text="LOGIN"
+        android:textSize="20dp"
+        android:background="@drawable/solid_button"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputpassword" />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="304dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:text="SIGNUP"
+        android:textSize="20dp"
+        android:background="@drawable/solid_button"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 </androidx.constraintlayout.widget.ConstraintLayout>

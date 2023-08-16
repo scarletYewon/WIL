@@ -24,6 +24,7 @@ class Splash : AppCompatActivity() {
 //            back.setBackgroundResource(R.color.black)
             val mTransition = TransitionDrawable(mColors)
             back.background = mTransition
+            // 2초동안
             mTransition.startTransition(2000)
         },1000)
         handler.postDelayed({

@@ -20,16 +20,16 @@ class SignUp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
         auth = FirebaseAuth.getInstance()
-        val name = findViewById<EditText>(R.id.input_name).text.toString()
-        val id = findViewById<EditText>(R.id.input_id).text.toString()
-        val pw = findViewById<EditText>(R.id.input_password).text.toString()
-        val mbti = findViewById<EditText>(R.id.input_mbti).text.toString()
-        val loc = findViewById<EditText>(R.id.input_address).text.toString()
-        val like = findViewById<EditText>(R.id.input_interesting).text.toString()
+        val name = findViewById<EditText>(R.id.input_name)
+        val id = findViewById<EditText>(R.id.input_id)
+        val pw = findViewById<EditText>(R.id.input_password)
+        val mbti = findViewById<EditText>(R.id.input_mbti)
+        val loc = findViewById<EditText>(R.id.input_address)
+        val like = findViewById<EditText>(R.id.input_interesting)
         val btn_signup = findViewById<Button>(R.id.btn_signup)
         btn_signup.setOnClickListener{
-            Log.e("mbti",mbti)
-            createAccount(name,id,pw,mbti,loc,like,accept = true)
+            Log.e("mbti",mbti.text.toString())
+            createAccount(name.text.toString(),id.text.toString(),pw.text.toString(),mbti.text.toString(),loc.text.toString(),like.text.toString(),accept = true)
         }
     }
     fun createAccount(name: String, id: String, pw: String, mbti: String, loc: String, like:String, accept: Boolean) {
@@ -56,13 +56,7 @@ class SignUp : AppCompatActivity() {
                         val database = FirebaseDatabase.getInstance()
                         val myRef = database.getReference()
                         val dataInput = Users(
-                            findViewById<EditText>(R.id.input_name).text.toString(),
-                            findViewById<EditText>(R.id.input_id).text.toString(),
-                            findViewById<EditText>(R.id.input_password).text.toString(),
-                            findViewById<EditText>(R.id.input_mbti).text.toString(),
-                            findViewById<EditText>(R.id.input_address).text.toString(),
-                            findViewById<EditText>(R.id.input_interesting).text.toString(),
-                            accept = true
+                            name, id, pw, mbti, loc, like,true
 //                            binding.accept.isChecked
                         )
                         myRef.child(uid).setValue(dataInput)

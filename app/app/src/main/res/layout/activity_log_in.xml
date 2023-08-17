@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/inputid"
+        android:id="@+id/input_id"
         android:layout_width="304dp"
         android:layout_height="46dp"
         android:layout_marginTop="10dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/inputpassword"
+        android:id="@+id/input_password"
         android:layout_width="304dp"
         android:layout_height="46dp"
         android:layout_marginTop="10dp"
@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/input_password" />
 
     <Button
         android:id="@+id/btn_signup"

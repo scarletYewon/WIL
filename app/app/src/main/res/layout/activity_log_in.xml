@@ -23,7 +23,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/edit_text"
         android:elevation="5dp"
-        android:hint="영어,숫자 조합의 5~10자 입력"
+        android:hint="이메일 형식으로 입력"
         android:inputType="text"
         android:paddingStart="10dp"
         android:textSize="15dp"

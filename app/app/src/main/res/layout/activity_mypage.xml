@@ -59,14 +59,20 @@
         android:layout_marginTop="21dp"
         tools:ignore="TouchTargetSizeCheck"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="141dp"
-        android:src="@drawable/bigporfile"
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:layout_width="123dp"
+        android:layout_height="161dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="106dp"
+        android:src="@drawable/face"
+        app:civ_border_color="#000000"
+        app:civ_border_overlay="true"
+
+        app:civ_border_width="3dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="61dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/name"

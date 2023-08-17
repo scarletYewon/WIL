@@ -69,8 +69,7 @@ class SignUp : AppCompatActivity() {
                     .setPositiveButton("동의",
                         DialogInterface.OnClickListener { dialog, id ->
                             Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, LogIn::class.java)
-                            startActivity(intent)
+                            createAccount(inputName,inputId,inputPassword,inputMbti,inputAddress,inputInterest,accept = true)
                         })
                     .setNegativeButton("취소",
                         DialogInterface.OnClickListener { dialog, id ->
@@ -79,7 +78,6 @@ class SignUp : AppCompatActivity() {
                 builder.show()
                }
             }
-            createAccount(name.text.toString(),id.text.toString(),password.text.toString(),mbti.text.toString(),address.text.toString(),interest.text.toString(),accept = true)
         }
     }
     fun createAccount(name: String, id: String, pw: String, mbti: String, loc: String, like:String, accept: Boolean) {

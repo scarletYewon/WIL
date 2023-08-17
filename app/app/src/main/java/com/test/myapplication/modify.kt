@@ -65,7 +65,7 @@ class modify : AppCompatActivity() {
         pass=findViewById(R.id.pass)
         interesting=findViewById(R.id.interesting)
         profileButton.setOnClickListener {
-            val intent= Intent(this,MainActivity::class.java)
+            val intent= Intent(this,mypageActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -75,7 +75,7 @@ class modify : AppCompatActivity() {
 
         mypageButton=findViewById(R.id.profileButton)
         mypageButton.setOnClickListener{
-            val intent= Intent(this,MainActivity::class.java)
+            val intent= Intent(this,mypageActivity::class.java)
             startActivity(intent)
         }
 

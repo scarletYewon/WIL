@@ -14,7 +14,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 
-class MainActivity : AppCompatActivity() {
+class mypageActivity : AppCompatActivity() {
     lateinit var slogun: TextView
     lateinit var name: TextView
     lateinit var profileButton: ImageButton
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_mypage)
 
         editbutton = findViewById(R.id.editbutton)
         editbutton.setOnClickListener {
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
 
         profileButton = findViewById(R.id.profileButton)
         profileButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, mypageActivity::class.java)
             startActivity(intent)
         }
 

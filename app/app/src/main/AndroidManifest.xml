@@ -13,12 +13,8 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="33">
         <activity
-            android:name=".MainActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".Topic"
+            android:exported="false" />
         <activity
             android:name=".SignUp"
             android:exported="false" />

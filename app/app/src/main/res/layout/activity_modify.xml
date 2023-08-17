@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".modify">
+
 
     <TextView
-
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="42sp"
         android:text="WIL"
+        android:inputType="text"
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@color/black"
@@ -76,13 +77,13 @@
         android:layout_marginTop="137dp"
         android:lineSpacingMultiplier="0.8"
         android:text="@string/name"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/editbutton"
+        android:id="@+id/modificationButton"
         android:layout_width="158dp"
         android:layout_height="32dp"
         android:layout_marginLeft="188dp"
@@ -90,7 +91,7 @@
         android:src="@drawable/modifybutton"
         android:contentDescription="modificationButton"
         android:textAlignment="center"
-        android:textSize="15sp"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
@@ -98,17 +99,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/editbutton"
+        android:text="@string/save"
         android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editbutton"
-        app:layout_constraintEnd_toEndOf="@+id/editbutton"
-        app:layout_constraintStart_toStartOf="@+id/editbutton"
-        app:layout_constraintTop_toTopOf="@+id/editbutton"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/modificationButton"
+        app:layout_constraintEnd_toEndOf="@+id/modificationButton"
+        app:layout_constraintStart_toStartOf="@+id/modificationButton"
+        app:layout_constraintTop_toTopOf="@+id/modificationButton"
         tools:ignore="TextSizeCheck" />
 
     <TextView
-        android:textColor="@color/black"
         android:id="@+id/idTag"
         android:layout_width="78dp"
         android:layout_height="30dp"
@@ -121,7 +121,6 @@
         app:layout_constraintTop_toTopOf="parent"
         />
     <TextView
-        android:textColor="@color/black"
         android:id="@+id/id"
         android:layout_width="220dp"
         android:layout_height="30dp"
@@ -135,7 +134,6 @@
         android:gravity="center"
         />
     <TextView
-        android:textColor="@color/black"
         android:id="@+id/passTag"
         android:layout_width="78dp"
         android:layout_height="30dp"
@@ -148,13 +146,12 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <TextView
-        android:textColor="@color/black"
+    <EditText
         android:id="@+id/pass"
         android:layout_width="220dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="153dp"
-        android:layout_marginTop="378dp"
+        android:layout_marginTop="369dp"
         android:gravity="center"
         android:inputType="textPassword"
         android:text="password"
@@ -162,9 +159,9 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck"
+        android:background="@drawable/edittextborder"/>
     <TextView
-        android:textColor="@color/black"
         android:id="@+id/residenceTag"
         android:layout_width="78dp"
         android:layout_height="30dp"
@@ -176,22 +173,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
-    <TextView
-        android:textColor="@color/black"
+
+    <EditText
         android:id="@+id/residence"
         android:layout_width="220dp"
-        android:layout_height="30dp"
-        android:text="경기도 구리~"
+        android:layout_height="50dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="444dp"
+        android:gravity="center"
+        android:text ="경기도 구리~"
         android:textSize="20sp"
-        android:layout_marginTop="455dp"
-        android:layout_marginLeft="153dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center"
-        />
+        android:background="@drawable/edittextborder"/>
+
     <TextView
-        android:textColor="@color/black"
         android:id="@+id/interestingTag"
         android:layout_width="78dp"
         android:layout_height="30dp"
@@ -203,22 +200,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
-    <TextView
-        android:textColor="@color/black"
+
+    <EditText
         android:id="@+id/interesting"
         android:layout_width="220dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="153dp"
+        android:layout_marginTop="523dp"
+        android:gravity="center"
         android:text="운동,음악"
         android:textSize="20sp"
-        android:layout_marginTop="532dp"
-        android:layout_marginLeft="153dp"
         android:textStyle="bold"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center"
-        />
+        tools:ignore="TouchTargetSizeCheck"
+        android:background="@drawable/edittextborder"/>
     <TextView
-        android:textColor="@color/black"
         android:id="@+id/mbtiTag"
         android:layout_width="78dp"
         android:layout_height="30dp"
@@ -230,21 +228,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
-    <TextView
-        android:textColor="@color/black"
+
+    <EditText
         android:id="@+id/mbti"
         android:layout_width="220dp"
-        android:layout_height="30dp"
-        android:text="mbti"
-        android:textSize="20sp"
-        android:layout_marginTop="609dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="153dp"
+        android:layout_marginTop="600dp"
+        android:gravity="center"
+        android:text="mbti"
+        android:inputType="text"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center"
-        />
-
-
+        tools:ignore="TouchTargetSizeCheck"
+        android:background="@drawable/edittextborder"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

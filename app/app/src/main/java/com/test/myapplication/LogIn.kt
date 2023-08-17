@@ -3,9 +3,11 @@ package com.test.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import java.util.regex.Pattern
 
 class LogIn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,13 +24,20 @@ class LogIn : AppCompatActivity() {
             val inputId = id.text.toString()
             val inputPassword = password.text.toString()
 
+
             if (inputId.isEmpty() || inputPassword.isEmpty()) {
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
-                 //메인 화면이랑 연결해야 함
+                if (!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{5,10}\$", inputId)) {
+                    Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
+                } else if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{8,20}\$", inputPassword)){
+                    Toast.makeText(this, "비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
+                } else{
+                    Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
+                    //메인 화면이랑 연결해야 함
 //                val intent = Intent(this, ::class.java)
-                startActivity(intent)
+                    startActivity(intent)
+                }
             }
         }
 
@@ -39,5 +48,6 @@ class LogIn : AppCompatActivity() {
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
+
     }
 }

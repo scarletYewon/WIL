@@ -10,7 +10,7 @@
         android:id="@+id/logo"
         android:layout_width="199dp"
         android:layout_height="111dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,42 +20,44 @@
         android:id="@+id/inputid"
         android:layout_width="304dp"
         android:layout_height="46dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/edit_text"
         android:elevation="5dp"
-        android:textSize="15dp"
+        android:hint="영어,숫자 조합의 5~10자 입력"
         android:inputType="text"
         android:paddingStart="10dp"
-        android:hint="아이디를 입력해주세요."
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/inputpassword"
         android:layout_width="304dp"
         android:layout_height="46dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/edit_text"
         android:elevation="5dp"
-        android:textSize="15dp"
+        android:hint="영어,숫자 조합의 8~20자 입력"
         android:inputType="textPassword"
         android:paddingStart="10dp"
-        android:hint="비밀번호를 입력해주세요."
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputid" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="304dp"
         android:layout_height="46dp"
         android:layout_marginTop="20dp"
-        android:text="LOGIN"
-        android:textSize="20dp"
         android:background="@drawable/solid_button"
+        android:text="LOGIN"
         android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputpassword" />
 
@@ -64,11 +66,33 @@
         android:layout_width="304dp"
         android:layout_height="46dp"
         android:layout_marginTop="20dp"
-        android:text="SIGNUP"
-        android:textSize="20dp"
         android:background="@drawable/solid_button"
+        android:text="SIGNUP"
         android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="아이디"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="비밀번호"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputid" />
 </androidx.constraintlayout.widget.ConstraintLayout>

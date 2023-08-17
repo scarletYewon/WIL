@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:id="@+id/iv_logo"
+        android:id="@+id/iv_logo_onepost"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:src="@drawable/logo"
@@ -17,34 +17,155 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-    <TextView
-        android:id="@+id/tv_title_show"
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginEnd="300dp"
-        android:ems="10"
-        android:text=""
+        android:layout_marginTop="16dp"
+        android:background="@drawable/profile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:id="@+id/separator_onepost"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="88dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
     <TextView
-        android:id="@+id/tv_memo_show"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_title_onepost"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="100dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:ems="10"
+        android:text="a"
+        app:layout_constraintTop_toBottomOf="@id/separator_onepost" />
+
+    <TextView
+        android:id="@+id/tv_viewcount"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="100dp"
+        android:textSize="10sp"
+        android:ems="10"
+        android:text="조회수 100 댓글 1 추천 50"
+        app:layout_constraintTop_toBottomOf="@id/separator_onepost" />
+
+    <Button
+        android:id="@+id/btn_like_onepost"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/like"
+        app:layout_constraintLeft_toRightOf="@id/tv_viewcount"
+        app:layout_constraintTop_toBottomOf="@id/separator_onepost" />
+
+    <TextView
+        android:id="@+id/tv_memo_onepost"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textSize="20sp"
+        android:ems="10"
+        android:text="this is main text."
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/separator_onepost" />
+
+    <View
+        android:id="@+id/separator2_onepost"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="500dp"
+        android:background="#cccccc"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/iv_user_onepost"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@android:drawable/presence_invisible"
+        app:layout_constraintRight_toLeftOf="@id/tv_name_onepost"
+        app:layout_constraintTop_toBottomOf="@id/separator2_onepost"/>
+
+    <TextView
+        android:id="@+id/tv_name_onepost"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="50dp"
+        android:textSize="10sp"
+        android:ems="10"
+        android:text="user_name"
+        android:textStyle="bold"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/separator_onepost" />
+
+    <TextView
+        android:id="@+id/tv_comment_show"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="50dp"
+        android:textSize="10sp"
         android:ems="10"
         android:text=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/separator_onepost" />
+
+    <View
+        android:id="@+id/separator3_onepost"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="600dp"
+        android:background="#cccccc"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btn_comment"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="send"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+    <EditText
+        android:id="@+id/et_comment"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="  댓글을 입력하세요"
+        android:textSize="15dp"
+        android:background="@drawable/et_rounded_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_comment"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

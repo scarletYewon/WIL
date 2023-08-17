@@ -32,10 +32,6 @@ class NewPost : AppCompatActivity() {
                 intent.putExtra("title", title.text.toString())
                 startActivity(intent)
             }
-
-
-
-
         }
     }
 }

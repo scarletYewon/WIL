@@ -35,12 +35,13 @@ class LogIn : AppCompatActivity() {
             if (inputId.isEmpty() || inputPassword.isEmpty()) {
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
             } else {
-                if (!Pattern.matches("^[_0-9a-zA-Z-]+@[0-9a-zA-Z]+(.[_0-9a-zA-Z-]+)*\$", inputId)) {
-                    Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
-                } else if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{8,20}\$", inputPassword)){
+//                if (!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{5,10}\$", inputId)) {
+//                    Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
+//                }
+                if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{8,20}\$", inputPassword)){
                     Toast.makeText(this, "비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
                 } else{
-                signinEmail(inputId,inputPassword)
+                    signinEmail(inputId,inputPassword)
                 }
             }
         }
@@ -63,7 +64,6 @@ class LogIn : AppCompatActivity() {
                     // Login, 아이디와 패스워드가 맞았을 때
                     Toast.makeText(this, "로그인성공", Toast.LENGTH_LONG).show()
                     moveMainPage(task.result?.user)
-
                 } else {
                     // Show the error message, 아이디와 패스워드가 틀렸을 때
                     Toast.makeText(this, "로그인실패", Toast.LENGTH_LONG).show()
@@ -76,7 +76,7 @@ class LogIn : AppCompatActivity() {
     private fun moveMainPage(user: FirebaseUser?) {
         // 파이어베이스 유저 상태가 있을 경우 다음 페이지로 넘어갈 수 있음
         if(user != null) {
-            val intent = (Intent(this, MainActivity::class.java))
+            val intent = (Intent(this, Main::class.java))
             startActivity(intent)
         }
     }

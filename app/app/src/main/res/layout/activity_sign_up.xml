@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/input_name" />
 
     <EditText
-        android:id="@+id/inputid"
+        android:id="@+id/input_id"
         android:layout_width="311dp"
         android:layout_height="30dp"
         android:layout_marginTop="5dp"
@@ -79,10 +79,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.155"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputid" />
+        app:layout_constraintTop_toBottomOf="@+id/input_id" />
 
     <EditText
-        android:id="@+id/inputpassword"
+        android:id="@+id/input_password"
         android:layout_width="311dp"
         android:layout_height="30dp"
         android:layout_marginTop="5dp"
@@ -106,10 +106,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/input_password" />
 
     <EditText
-        android:id="@+id/inputmbti"
+        android:id="@+id/input_mbti"
         android:layout_width="311dp"
         android:layout_height="30dp"
         android:layout_marginTop="5dp"
@@ -133,10 +133,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputmbti" />
+        app:layout_constraintTop_toBottomOf="@+id/input_mbti" />
 
     <EditText
-        android:id="@+id/inputaddress"
+        android:id="@+id/input_address"
         android:layout_width="311dp"
         android:layout_height="30dp"
         android:layout_marginTop="5dp"
@@ -160,7 +160,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputaddress" />
+        app:layout_constraintTop_toBottomOf="@+id/input_address" />
 
     <EditText
         android:id="@+id/input_interesting"

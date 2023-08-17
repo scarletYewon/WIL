@@ -10,8 +10,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="88dp"
         android:orientation="vertical">
+
 
         <ImageView
             android:layout_width="match_parent"
@@ -27,7 +28,15 @@
             android:layout_marginTop="21dp"
             android:layout_marginRight="29dp"
             app:srcCompat="@drawable/mypage" />
+
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="158dp">
@@ -41,16 +50,22 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginLeft="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 app:srcCompat="@drawable/logo2" />
 
         </RelativeLayout>
 
 
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"/>
     <LinearLayout
         android:id="@+id/health"
         android:layout_width="match_parent"
@@ -66,6 +81,7 @@
             app:srcCompat="@drawable/health" />
 
         <TextView
+            android:id="@+id/health_name"
             android:layout_width="97dp"
             android:layout_height="27dp"
             android:layout_marginLeft="13dp"
@@ -74,11 +90,16 @@
             android:textStyle="normal"
             android:textColor="@color/black"
             android:textFontWeight="200"
-            android:text="헬스게시판">
+            android:text="운동게시판">
 
         </TextView>
 
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"/>
 
 
     <LinearLayout
@@ -95,6 +116,7 @@
             app:srcCompat="@drawable/music" />
 
         <TextView
+            android:id="@+id/music_name"
             android:layout_width="97dp"
             android:layout_height="27dp"
             android:layout_marginLeft="13dp"
@@ -108,7 +130,11 @@
         </TextView>
 
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"/>
 
     <LinearLayout
         android:id="@+id/fashion"
@@ -123,6 +149,7 @@
             app:srcCompat="@drawable/fashion" />
 
         <TextView
+            android:id="@+id/fashion_name"
             android:layout_width="97dp"
             android:layout_height="27dp"
             android:layout_marginLeft="13dp"
@@ -136,7 +163,11 @@
         </TextView>
 
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"/>
 
 
 </LinearLayout>

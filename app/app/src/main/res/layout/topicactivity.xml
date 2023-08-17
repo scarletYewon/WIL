@@ -29,31 +29,64 @@
             android:layout_marginRight="29dp"
             app:srcCompat="@drawable/mypage" />
     </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"/>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="87dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="김김김"
             android:textSize="20dp"
-            android:text="김김김" />
+            android:textStyle="bold" />
+
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/text_name2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/text_name"
+            android:text="님"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/edit_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_name"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="-2dp"
+            android:text="운동게시판"
             android:textSize="20dp"
-            android:text="환영합니다" />
+            android:textStyle="bold" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/edit_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/edit_text1"
+            android:text="에 오신걸 환영합니다"
+            android:textSize="15dp" />
 
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,10 +105,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="89dp"
+                android:layout_marginLeft="70dp"
                 android:layout_marginTop="30dp"
                 android:duplicateParentState="true"
-                app:srcCompat="@drawable/like_icon" />
+                app:srcCompat="@drawable/like_unpressed" />
 
             <TextView
                 android:layout_width="112dp"
@@ -83,7 +116,7 @@
                 android:layout_alignParentBottom="true"
                 android:textSize="20dp"
                 android:textStyle="normal"
-                android:layout_marginLeft="57dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginBottom="10dp"
                 android:textAlignment="center"
                 android:text="like"
@@ -93,9 +126,13 @@
             </TextView>
 
         </RelativeLayout>
-
+        <View
+            android:layout_width="1dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:background="#000000"/>
         <RelativeLayout
-            android:layout_width="202dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
@@ -104,7 +141,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="80dp"
+                android:layout_marginLeft="70dp"
                 android:layout_marginTop="30dp"
                 app:srcCompat="@drawable/new_icon" />
 
@@ -112,7 +149,7 @@
                 android:layout_width="112dp"
                 android:layout_height="23dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginLeft="57dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginBottom="10dp"
                 android:text="NEW"
                 android:textAlignment="center"
@@ -124,8 +161,12 @@
         </RelativeLayout>
 
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"/>
 
-    <!--로그인 회원가입 라인 -->
     <RelativeLayout
         android:id="@+id/protein"
         android:layout_width="match_parent"
@@ -152,7 +193,7 @@
             android:layout_marginBottom="10dp"
             android:layout_alignParentBottom="true"
             android:text="조회수"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/text_1_1"
@@ -163,7 +204,7 @@
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@id/text_1"
             android:text="댓글"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
         <TextView
             android:id="@+id/text_1_2"
             android:layout_width="wrap_content"
@@ -173,9 +214,16 @@
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@id/text_1_1"
             android:text="추천"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
 
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"/>
+
     <RelativeLayout
         android:id="@+id/running"
         android:layout_width="match_parent"
@@ -200,7 +248,7 @@
             android:layout_marginBottom="10dp"
             android:layout_alignParentBottom="true"
             android:text="조회수"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
         <TextView
             android:id="@+id/text_2_1"
             android:layout_width="wrap_content"
@@ -210,7 +258,7 @@
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@id/text_2"
             android:text="댓글"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
         <TextView
             android:id="@+id/text_2_2"
             android:layout_width="wrap_content"
@@ -220,15 +268,20 @@
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@id/text_2_1"
             android:text="추천"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
 
     </RelativeLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
 
 
     </LinearLayout>

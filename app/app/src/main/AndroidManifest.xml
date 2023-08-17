@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="33">
         <activity
+            android:name=".modify"
+            android:exported="false" />
+        <activity
+            android:name=".mypageActivity"
+            android:exported="false" />
+        <activity
             android:name=".Topic"
             android:exported="false" />
         <activity

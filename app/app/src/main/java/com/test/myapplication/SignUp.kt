@@ -59,7 +59,7 @@ class SignUp : AppCompatActivity() {
                             name, id, pw, mbti, loc, like,true
 //                            binding.accept.isChecked
                         )
-                        myRef.child(uid).setValue(dataInput)
+                        myRef.child("Users").child(uid).setValue(dataInput)
                         Toast.makeText(
                             this, "계정 생성 완료.",
                             Toast.LENGTH_SHORT

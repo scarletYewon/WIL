@@ -4,25 +4,25 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42b24af5-01d8-4d9f-8296-33b1b2d95b19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/src/main/java/com/test/myapplication/Dialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/test/myapplication/SignUp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/test/myapplication/SignUp.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
-    </list>
+    <list default="true" id="42b24af5-01d8-4d9f-8296-33b1b2d95b19" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2TyKDlow1ounshsFGKOa2coVUpg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

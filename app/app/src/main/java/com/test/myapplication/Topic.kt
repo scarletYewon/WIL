@@ -1,7 +1,6 @@
 package com.test.myapplication
 
 import android.annotation.SuppressLint
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,11 +10,11 @@ import android.widget.TextView
 import android.widget.Toast
 import java.util.Random
 
-class TopicActivity : AppCompatActivity() {
+class Topic : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.topicactivity)
+        setContentView(R.layout.activity_topic)
 
         val nameText = findViewById<TextView>(R.id.text_name)  //이름 값 가져오기
         val strData = intent.getStringExtra("mypageActivity")
@@ -58,7 +57,7 @@ class TopicActivity : AppCompatActivity() {
 
         //마이페이지
         val mypage_btn = findViewById<ImageView>(R.id.maypage_btn)
-        mypage_btn.setOnClickListener{
+        mypage_btn.setOnClickListener {
             Toast.makeText(this, "마이페이지로 이동합니다 ", Toast.LENGTH_SHORT).show()
 //            val intent = Intent(this,mypageActivity::class.java)
 //            startActivity(intent)
@@ -91,14 +90,14 @@ class TopicActivity : AppCompatActivity() {
 
         //항목 1
         val protein = findViewById<RelativeLayout>(R.id.protein)
-        protein.setOnClickListener{
+        protein.setOnClickListener {
 
 //            val intent = Intent(this,defaultActivity::class.java)
 //            startActivity(intent)
         }
         //항목 2
         val running = findViewById<RelativeLayout>(R.id.running)
-        running.setOnClickListener{
+        running.setOnClickListener {
 
 //            val intent = Intent(this,mypageActivity::class.java)
 //            startActivity(intent)

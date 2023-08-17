@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
-    >
+    tools:context=".Main">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -35,12 +34,11 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:background="#000000"/>
+        android:background="#000000" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="158dp">
-
 
 
         <RelativeLayout
@@ -52,20 +50,22 @@
                 android:id="@+id/imageView6"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:layout_marginTop="30dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginTop="30dp"
                 app:srcCompat="@drawable/logo2" />
 
         </RelativeLayout>
 
 
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:background="#000000"/>
+        android:background="#000000" />
+
     <LinearLayout
         android:id="@+id/health"
         android:layout_width="match_parent"
@@ -84,22 +84,23 @@
             android:id="@+id/health_name"
             android:layout_width="97dp"
             android:layout_height="27dp"
-            android:layout_marginLeft="13dp"
             android:layout_gravity="center"
-            android:textSize="20dp"
-            android:textStyle="normal"
+            android:layout_marginLeft="13dp"
+            android:text="운동게시판"
             android:textColor="@color/black"
             android:textFontWeight="200"
-            android:text="운동게시판">
+            android:textSize="20dp"
+            android:textStyle="normal">
 
         </TextView>
 
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:background="#000000"/>
+        android:background="#000000" />
 
 
     <LinearLayout
@@ -119,27 +120,29 @@
             android:id="@+id/music_name"
             android:layout_width="97dp"
             android:layout_height="27dp"
-            android:layout_marginLeft="13dp"
             android:layout_gravity="center"
-            android:textSize="20dp"
-            android:textStyle="normal"
+            android:layout_marginLeft="13dp"
+            android:text="음악게시판"
             android:textColor="@color/black"
             android:textFontWeight="200"
-            android:text="음악게시판">
+            android:textSize="20dp"
+            android:textStyle="normal">
 
         </TextView>
 
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:background="#000000"/>
+        android:background="#000000" />
 
     <LinearLayout
         android:id="@+id/fashion"
         android:layout_width="match_parent"
         android:layout_height="79dp">
+
         <ImageView
             android:id="@+id/fashion_icon"
             android:layout_width="35dp"
@@ -152,22 +155,23 @@
             android:id="@+id/fashion_name"
             android:layout_width="97dp"
             android:layout_height="27dp"
-            android:layout_marginLeft="13dp"
             android:layout_gravity="center"
-            android:textSize="20dp"
-            android:textStyle="normal"
+            android:layout_marginLeft="13dp"
+            android:text="패션게시판"
             android:textColor="@color/black"
             android:textFontWeight="200"
-            android:text="패션게시판">
+            android:textSize="20dp"
+            android:textStyle="normal">
 
         </TextView>
 
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:background="#000000"/>
+        android:background="#000000" />
 
 
 </LinearLayout>

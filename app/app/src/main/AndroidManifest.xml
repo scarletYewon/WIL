@@ -13,10 +13,10 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="33">
         <activity
-            android:name=".TopicActivity"
+            android:name=".Topic"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

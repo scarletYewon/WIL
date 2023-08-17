@@ -5,11 +5,13 @@ import android.accounts.AccountManager
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import java.util.regex.Pattern
 
 class LogIn : AppCompatActivity() {
     private var auth : FirebaseAuth? = null
@@ -29,11 +31,17 @@ class LogIn : AppCompatActivity() {
             val inputId = id.text.toString()
             val inputPassword = password.text.toString()
 
+
             if (inputId.isEmpty() || inputPassword.isEmpty()) {
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
             } else {
-                // firebase 연결함수
+                if (!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{5,10}\$", inputId)) {
+                    Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
+                } else if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{8,20}\$", inputPassword)){
+                    Toast.makeText(this, "비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
+                } else{
                 signinEmail(inputId,inputPassword)
+                }
             }
         }
 
@@ -44,6 +52,7 @@ class LogIn : AppCompatActivity() {
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
+
     }
     // 로그인
     fun signinEmail(id:String,pw:String) {

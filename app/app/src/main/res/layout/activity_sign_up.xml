@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -36,7 +37,7 @@
         android:elevation="5dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="이름을 입력해주세요."
+        android:hint="한글만 입력"
         android:textSize="13dp"
         android:paddingStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +65,7 @@
         android:ems="10"
         android:inputType="text"
         android:paddingStart="10dp"
-        android:hint="아이디를 입력해주세요."
+        android:hint="영어,숫자 조합의 5~10자 입력"
         android:textSize="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +89,7 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/edit_text"
         android:elevation="5dp"
-        android:hint="비밀번호를 입력해주세요."
+        android:hint="영어,숫자 조합의 8~20자 입력"
         android:textSize="13dp"
         android:paddingStart="10dp"
         android:ems="10"
@@ -118,7 +119,7 @@
         android:ems="10"
         android:paddingStart="10dp"
         android:inputType="text"
-        android:hint="MBTI를 입력해주세요."
+        android:hint="MBTI 입력"
         android:textSize="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,14 +146,14 @@
         android:paddingStart="10dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="거주지를 입력해주세요. ('00도 00시'까지만 입력)"
+        android:hint="'00도 00시'까지만 입력"
         android:textSize="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/address" />
 
     <TextView
-        android:id="@+id/interesting"
+        android:id="@+id/interest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -163,7 +164,7 @@
         app:layout_constraintTop_toBottomOf="@+id/input_address" />
 
     <EditText
-        android:id="@+id/input_interesting"
+        android:id="@+id/input_interest"
         android:layout_width="311dp"
         android:layout_height="30dp"
         android:layout_marginTop="5dp"
@@ -172,11 +173,11 @@
         android:ems="10"
         android:inputType="text"
         android:paddingStart="10dp"
-        android:hint="관심사를 선택해주세요.(운동/음악/패션/명언/애니)"
+        android:hint="운동/음악/패션/명언/애니 중 선택 입력"
         android:textSize="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/interesting" />
+        app:layout_constraintTop_toBottomOf="@+id/interest" />
 
     <Button
         android:id="@+id/btn_signup"
@@ -189,6 +190,6 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_interesting" />
+        app:layout_constraintTop_toBottomOf="@+id/input_interest" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,10 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import kotlinx.coroutines.Dispatchers.Main
 import java.util.regex.Pattern
 import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
@@ -27,13 +25,15 @@ class SignUp : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
         
         val name = findViewById<EditText>(R.id.input_name)
-        val id = findViewById<EditText>(R.id.inputid)
+        val id = findViewById<EditText>(R.id.input_id)
         val password = findViewById<EditText>(R.id.input_password)
         val mbti = findViewById<EditText>(R.id.input_mbti)
         val address = findViewById<EditText>(R.id.input_address)
         val interest = findViewById<EditText>(R.id.input_interest)
 
         val btnSignup = findViewById<Button>(R.id.btn_signup)
+        auth = FirebaseAuth.getInstance()
+
         // SIGNUP버튼 클릭 시 회원가입 화면으로 이동
         btnSignup.setOnClickListener {
             val inputName = name.text.toString()
@@ -48,9 +48,11 @@ class SignUp : AppCompatActivity() {
         } else{
             if(!Pattern.matches("^[가-힣]*\$", inputName)){
                 Toast.makeText(this, "이름을 다시 입력해주세요.", Toast.LENGTH_SHORT).show()
-            } else if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{5,10}\$", inputId)){
-                Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
-            } else if (!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{8,20}\$", inputPassword)){
+            }
+//            else if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{5,10}\$", inputId)){
+//                Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
+//            }
+            else if (!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{8,20}\$", inputPassword)){
                 Toast.makeText(this, "비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
             } else{
                 //이용약관 다이얼로그 띄우기
@@ -77,19 +79,7 @@ class SignUp : AppCompatActivity() {
                 builder.show()
                }
             }
-        }
-        
-        auth = FirebaseAuth.getInstance()
-        val name = findViewById<EditText>(R.id.input_name)
-        val id = findViewById<EditText>(R.id.input_id)
-        val pw = findViewById<EditText>(R.id.input_password)
-        val mbti = findViewById<EditText>(R.id.input_mbti)
-        val loc = findViewById<EditText>(R.id.input_address)
-        val like = findViewById<EditText>(R.id.input_interesting)
-        val btn_signup = findViewById<Button>(R.id.btn_signup)
-        btn_signup.setOnClickListener{
-            Log.e("mbti",mbti.text.toString())
-            createAccount(name.text.toString(),id.text.toString(),pw.text.toString(),mbti.text.toString(),loc.text.toString(),like.text.toString(),accept = true)
+            createAccount(name.text.toString(),id.text.toString(),password.text.toString(),mbti.text.toString(),address.text.toString(),interest.text.toString(),accept = true)
         }
     }
     fun createAccount(name: String, id: String, pw: String, mbti: String, loc: String, like:String, accept: Boolean) {

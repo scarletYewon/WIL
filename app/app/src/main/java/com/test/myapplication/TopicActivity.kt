@@ -1,8 +1,10 @@
 package com.test.myapplication
 
 import android.annotation.SuppressLint
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -14,12 +16,6 @@ class TopicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.topicactivity)
-
-        val mypage_btn = findViewById<ImageView>(R.id.maypage_btn)
-        val New_btn = findViewById<ImageView>(R.id.New_btn)
-        val like_img = findViewById<ImageView>(R.id.like_img)
-        val protein = findViewById<RelativeLayout>(R.id.protein)
-        val running = findViewById<RelativeLayout>(R.id.running)
 
         val nameText = findViewById<TextView>(R.id.text_name)  //이름 값 가져오기
         val strData = intent.getStringExtra("mypageActivity")
@@ -61,31 +57,47 @@ class TopicActivity : AppCompatActivity() {
         text_3_1.text = "좋아요 $num3_1"
 
         //마이페이지
+        val mypage_btn = findViewById<ImageView>(R.id.maypage_btn)
         mypage_btn.setOnClickListener{
             Toast.makeText(this, "마이페이지로 이동합니다 ", Toast.LENGTH_SHORT).show()
 //            val intent = Intent(this,mypageActivity::class.java)
 //            startActivity(intent)
         }
         //NEW
+        val New_btn = findViewById<ImageView>(R.id.New_btn)
         New_btn.setOnClickListener {
             Toast.makeText(this, "새로 만들기로 이동합니다 ", Toast.LENGTH_SHORT).show()
 //            val intent = Intent(this,newpostActivity::class.java)
 //            startActivity(intent)
         }
         //좋아요 버튼
+        val imageIndex = 1
+        val like_img = findViewById<ImageView>(R.id.like_img)
+        val unlike_img = findViewById<ImageView>(R.id.unlike_img)
         like_img.setOnClickListener {
             Toast.makeText(this, "좋아요 ", Toast.LENGTH_SHORT).show()
 
+            if (imageIndex == 0) {
+                like_img.setVisibility(View.VISIBLE);
+                unlike_img.setVisibility(View.INVISIBLE);
+                imageIndex == 1
+            } else if (imageIndex == 1) {
+                like_img.setVisibility(View.INVISIBLE);
+                unlike_img.setVisibility(View.VISIBLE);
+                imageIndex == 0
+            }
+
         }
 
-
-
+        //항목 1
+        val protein = findViewById<RelativeLayout>(R.id.protein)
         protein.setOnClickListener{
 
 //            val intent = Intent(this,defaultActivity::class.java)
 //            startActivity(intent)
         }
-
+        //항목 2
+        val running = findViewById<RelativeLayout>(R.id.running)
         running.setOnClickListener{
 
 //            val intent = Intent(this,mypageActivity::class.java)

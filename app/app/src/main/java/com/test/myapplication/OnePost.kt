@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import android.util.Log
 
 
 class OnePost : AppCompatActivity() {
@@ -50,15 +51,14 @@ class OnePost : AppCompatActivity() {
                 tvCommentShow.visibility = View.VISIBLE
                 ivUser.visibility = View.VISIBLE
 
-                // 기존 댓글 텍스트에 새 댓글 추가하여 표시
+//              // 비어있는 댓글 텍스트에 새로 입력한 댓글 표시
                 val existingText = tvCommentShow.text.toString()
                 val newComment = "$existingText\n$commentText"
                 tvCommentShow.text = newComment
 
-                // 여기서 extras에 저장하는 부분도 추가 가능하나, 필요시에 활용하실 수 있습니다.
-                 val intent = Intent()
-                 intent.putExtra("comment", commentText)
-                 setResult(Activity.RESULT_OK, intent)
+                // 여기서 extras에 저장하는 부분도 추가 가능하나, 잘 안되는듯.. 보수 필요
+                intent.putExtra("comment", commentText)
+                setResult(Activity.RESULT_OK, intent)
             }
             else {
                 // 댓글이 비어있으면 토스트 메시지 띄우기

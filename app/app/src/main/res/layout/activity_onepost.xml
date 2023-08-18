@@ -43,10 +43,10 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="100dp"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         android:ems="10"
-        android:text="a"
+        android:text="프로틴 어쩌구"
         app:layout_constraintTop_toBottomOf="@id/separator_onepost" />
 
     <TextView
@@ -81,7 +81,7 @@
         android:layout_marginEnd="30dp"
         android:textSize="20sp"
         android:ems="10"
-        android:text="this is main text."
+        android:text="프로틴 가격 다음주부터 오른대."
         android:inputType="textMultiLine"
         app:layout_constraintTop_toBottomOf="@id/separator_onepost" />
 

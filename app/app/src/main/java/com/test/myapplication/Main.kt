@@ -18,7 +18,7 @@ class Main : AppCompatActivity() {
         val fashion = findViewById<LinearLayout>(R.id.fashion)
         val maypage_btn = findViewById<ImageView>(R.id.maypage_btn)
         maypage_btn.setOnClickListener {
-            val intent = Intent(this,mypageActivity::class.java)
+            val intent = Intent(this,MyPage::class.java)
             startActivity(intent)
             Toast.makeText(this, "마이페이지로 이동합니다 ", Toast.LENGTH_SHORT).show()
         }

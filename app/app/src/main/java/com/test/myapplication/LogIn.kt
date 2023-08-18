@@ -35,9 +35,9 @@ class LogIn : AppCompatActivity() {
             if (inputId.isEmpty() || inputPassword.isEmpty()) {
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
             } else {
-//                if (!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{5,10}\$", inputId)) {
-//                    Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
-//                }
+                if (!Pattern.matches("^[_0-9a-zA-Z-]+@[0-9a-zA-Z]+(.[_0-9a-zA-Z-]+)*\$", inputId)) {
+                    Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
+                }
                 if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{8,20}\$", inputPassword)){
                     Toast.makeText(this, "비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
                 } else{

@@ -1,6 +1,8 @@
 package com.test.myapplication
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.icu.text.CaseMap.Title
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,11 +12,13 @@ import android.widget.TextView
 import android.widget.Toast
 import java.util.Random
 
-class Topic : AppCompatActivity() {
+class Topic1 : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_topic)
+
+
 
         val nameText = findViewById<TextView>(R.id.text_name)  //이름 값 가져오기
         val strData = intent.getStringExtra("mypageActivity")
@@ -89,8 +93,14 @@ class Topic : AppCompatActivity() {
         }
 
         //항목 1
+        val TitleList = arrayListOf<Topic_Item>(
+
+        )
+
         val protein = findViewById<RelativeLayout>(R.id.protein)
         protein.setOnClickListener {
+
+
 
 //            val intent = Intent(this,defaultActivity::class.java)
 //            startActivity(intent)

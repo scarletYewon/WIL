@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/small_logo" />
 
         <ImageView
             android:id="@+id/maypage_btn"
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:background="#000000" />
+        android:background="#D4D4D4" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:background="#000000" />
+        android:background="#D4D4D4" />
 
     <LinearLayout
         android:id="@+id/health"
@@ -100,7 +100,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:background="#000000" />
+        android:background="#D4D4D4" />
 
 
     <LinearLayout
@@ -136,7 +136,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:background="#000000" />
+        android:background="#D4D4D4" />
 
     <LinearLayout
         android:id="@+id/fashion"
@@ -171,7 +171,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_centerInParent="true"
-        android:background="#000000" />
+        android:background="#D4D4D4" />
 
 
 </LinearLayout>

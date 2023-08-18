@@ -50,12 +50,6 @@ class MyPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mypage)
 
-
-
-
-
-
-
         editbutton = findViewById(R.id.editbutton)
         editbutton.setOnClickListener {
             startmodify.launch(Intent(this, Modify::class.java))

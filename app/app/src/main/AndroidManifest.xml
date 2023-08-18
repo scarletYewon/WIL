@@ -13,10 +13,10 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="33">
         <activity
-            android:name=".modify"
+            android:name=".Modify"
             android:exported="false" />
         <activity
-            android:name=".mypageActivity"
+            android:name=".MyPage"
             android:exported="false" />
         <activity
             android:name=".Topic"

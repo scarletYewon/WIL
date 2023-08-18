@@ -1,6 +1,6 @@
 package com.test.myapplication
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,7 +11,6 @@ import android.widget.Toast
 import java.util.Random
 
 class Topic : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_topic)
@@ -59,8 +58,8 @@ class Topic : AppCompatActivity() {
         val mypage_btn = findViewById<ImageView>(R.id.maypage_btn)
         mypage_btn.setOnClickListener {
             Toast.makeText(this, "마이페이지로 이동합니다 ", Toast.LENGTH_SHORT).show()
-//            val intent = Intent(this,mypageActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this,mypageActivity::class.java)
+            startActivity(intent)
         }
         //NEW
         val New_btn = findViewById<ImageView>(R.id.New_btn)

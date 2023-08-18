@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".mypageActivity">
 
     <TextView
 
@@ -125,7 +125,7 @@
         android:id="@+id/id"
         android:layout_width="220dp"
         android:layout_height="30dp"
-        android:text="hellow world"
+        android:text="hello world"
         android:textSize="20sp"
         android:layout_marginTop="301dp"
         android:layout_marginLeft="153dp"

@@ -16,8 +16,8 @@ class Main : AppCompatActivity() {
         val health = findViewById<LinearLayout>(R.id.health)
         val music = findViewById<LinearLayout>(R.id.music)
         val fashion = findViewById<LinearLayout>(R.id.fashion)
-        val maypage_btn = findViewById<ImageView>(R.id.maypage_btn)
-        maypage_btn.setOnClickListener {
+        val mypage_btn = findViewById<ImageView>(R.id.mypage_btn)
+        mypage_btn.setOnClickListener {
             val intent = Intent(this,MyPage::class.java)
             startActivity(intent)
             Toast.makeText(this, "마이페이지로 이동합니다 ", Toast.LENGTH_SHORT).show()

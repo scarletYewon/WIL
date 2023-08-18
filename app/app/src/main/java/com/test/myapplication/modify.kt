@@ -15,7 +15,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 
-class modify : AppCompatActivity() {
+class Modify : AppCompatActivity() {
     lateinit var mypageButton: ImageButton
     lateinit var profileButton: ImageButton
     lateinit var residence: EditText
@@ -65,7 +65,7 @@ class modify : AppCompatActivity() {
         pass=findViewById(R.id.pass)
         interesting=findViewById(R.id.interesting)
         profileButton.setOnClickListener {
-            val intent= Intent(this,mypageActivity::class.java)
+            val intent= Intent(this,MyPage::class.java)
             startActivity(intent)
             finish()
         }
@@ -75,7 +75,7 @@ class modify : AppCompatActivity() {
 
         mypageButton=findViewById(R.id.profileButton)
         mypageButton.setOnClickListener{
-            val intent= Intent(this,mypageActivity::class.java)
+            val intent= Intent(this,MyPage::class.java)
             startActivity(intent)
         }
 
@@ -85,6 +85,7 @@ class modify : AppCompatActivity() {
             val mbtiT = mbti.text.toString()
             val interestingT=interesting.text.toString()
             val passT=pass.text.toString()
+            // 수정 post request
 
             val result = Intent()
             result.putExtra("residenceId", residenceT)

@@ -1,5 +1,5 @@
 package com.test.myapplication
-
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -65,8 +65,8 @@ class Topic : AppCompatActivity() {
         val New_btn = findViewById<ImageView>(R.id.New_btn)
         New_btn.setOnClickListener {
             Toast.makeText(this, "새로 만들기로 이동합니다 ", Toast.LENGTH_SHORT).show()
-//            val intent = Intent(this,newpostActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this,NewPost::class.java)
+            startActivity(intent)
         }
         //좋아요 버튼
         val imageIndex = 1

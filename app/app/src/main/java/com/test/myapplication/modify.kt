@@ -5,8 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+
 
 class Modify : AppCompatActivity() {
     lateinit var mypageButton: ImageButton
@@ -22,39 +28,7 @@ class Modify : AppCompatActivity() {
     lateinit var globalName : String
     lateinit var globalEmail : String
     lateinit var globalPass : String
-
-//    fun deletePost(postId: String, userId: String, callback: (Boolean, String?) -> Unit) {
-//        val database = FirebaseDatabase.getInstance()
-//        val postsRef = database.getReference("posts").child(postId)
-//        val userPostsRef = database.getReference("user-posts").child(userId).child(postId)
-//
-//        postsRef.addListenerForSingleValueEvent(object : ValueEventListener {
-//            override fun onDataChange(dataSnapshot: DataSnapshot) {
-//                if (dataSnapshot.exists()) {
-//                    postsRef.removeValue { error, _ ->
-//                        if (error != null) {
-//                            callback(false, "Error deleting post: ${error.message}")
-//                        } else {
-//                            userPostsRef.removeValue { userError, _ ->
-//                                if (userError != null) {
-//                                    callback(false, "Error deleting user post: ${userError.message}")
-//                                } else {
-//                                    callback(true, null)
-//                                }
-//                            }
-//                        }
-//                    }
-//                } else {
-//                    callback(false, "Post not found")
-//                }
-//            }
-//
-//            override fun onCancelled(error: DatabaseError) {
-//                callback(false, "Database error: ${error.message}")
-//            }
-//        })
-//    }
-
+    val uid = FirebaseAuth.getInstance().uid ?:""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,21 +54,6 @@ class Modify : AppCompatActivity() {
         val like = findViewById<EditText>(R.id.interesting)
         val mbti = findViewById<EditText>(R.id.mbti)
 
-
-        val editLoc = loc.text.toString()
-        val editLike = like.text.toString()
-        val editMbti = mbti.text.toString()
-        if (editLoc.isEmpty() || editLike.isEmpty()|| editMbti.isEmpty()) {
-            Toast.makeText(this, "빈칸을 다 채워주세요", Toast.LENGTH_SHORT).show()
-        } else {
-//            deletePost(postId, userId) { success, errorMessage ->
-//                if (success) {
-//                    println("Post deleted successfully")
-//                } else {
-//                    println("Error: $errorMessage")
-//                }
-//            }
-        }
 //
 //        val slogunText:String=slogun.text.toString()
 //        val nameText:String=name.text.toString()
@@ -128,6 +87,11 @@ class Modify : AppCompatActivity() {
 //        interesting=findViewById(R.id.interesting)
 
 
+        val logo = findViewById<ImageView>(R.id.logo)
+        logo.setOnClickListener{
+            val intent = Intent(this,Main::class.java)
+            startActivity(intent)
+        }
 
 
 
@@ -139,8 +103,25 @@ class Modify : AppCompatActivity() {
 
         modificationButton = findViewById(R.id.modificationButton)
         modificationButton.setOnClickListener{
-            val intent = Intent(this, MyPage::class.java)
-            startActivity(intent)
+            val editLoc = loc.text.toString()
+            val editLike = like.text.toString()
+            val editMbti = mbti.text.toString()
+            if (editLoc.isEmpty() || editLike.isEmpty()|| editMbti.isEmpty()) {
+                Toast.makeText(this, "빈칸을 다 채워주세요", Toast.LENGTH_SHORT).show()
+            } else {
+                onDeleteContent()
+                val contentRef = FirebaseDatabase.getInstance().reference.child("Users").child(uid)
+                val newDatas = Users(globalName,globalEmail,globalPass,editMbti,editLoc,editLike,true)
+                contentRef.setValue(newDatas).addOnSuccessListener {
+                    Toast.makeText(this, "회원정보가 수정되었습니다.", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener { e ->
+                    println("error: ${e.message}")
+                    Toast.makeText(this, "회원정보 수정에 실패했습니다.", Toast.LENGTH_SHORT).show()
+                }
+
+                val intent = Intent(this, MyPage::class.java)
+                startActivity(intent)
+            }
         }
 //        modificationButton.setOnClickListener {
 //            val residenceT = residence.text.toString()
@@ -160,4 +141,13 @@ class Modify : AppCompatActivity() {
 //        }
     }
 
+    private fun onDeleteContent() {
+        val contentRef = FirebaseDatabase.getInstance().reference.child("Users").child(uid)
+        contentRef.removeValue().addOnSuccessListener {
+//            Toast.makeText(this, "삭제 성공", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener { e ->
+            println("error: ${e.message}")
+//            Toast.makeText(this, "삭제 실패", Toast.LENGTH_SHORT).show()
+        }
+    }
 }

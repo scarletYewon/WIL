@@ -14,7 +14,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 
-class mypageActivity : AppCompatActivity() {
+class MyPage : AppCompatActivity() {
     lateinit var slogun: TextView
     lateinit var name: TextView
     lateinit var profileButton: ImageButton
@@ -52,16 +52,21 @@ class mypageActivity : AppCompatActivity() {
 
         editbutton = findViewById(R.id.editbutton)
         editbutton.setOnClickListener {
-            startmodify.launch(Intent(this, modify::class.java))
+            startmodify.launch(Intent(this, Modify::class.java))
         }
 
         slogun = findViewById(R.id.slogun)
+
+
         name = findViewById(R.id.name)
-        residence = findViewById(R.id.residence)
-        mbti = findViewById(R.id.mbti)
         pass = findViewById(R.id.pass)
+        residence = findViewById(R.id.residence)
         interesting = findViewById(R.id.interesting)
+        mbti = findViewById(R.id.mbti)
+        // get request
+
         nameIndex = findViewById(R.id.name)
+
 
         val nameIndexText = nameIndex.text.toString()
         val charFind = ','
@@ -92,7 +97,7 @@ class mypageActivity : AppCompatActivity() {
 
         profileButton = findViewById(R.id.profileButton)
         profileButton.setOnClickListener {
-            val intent = Intent(this, mypageActivity::class.java)
+            val intent = Intent(this, MyPage::class.java)
             startActivity(intent)
         }
 

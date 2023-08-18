@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MyPage">
 
     <TextView
 
@@ -53,7 +53,7 @@
         android:layout_marginRight="29dp"
         android:contentDescription="GoMyPage"
         android:tooltipText="MyPage"
-        android:src="@drawable/porfile"
+        android:src="@drawable/profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="21dp"

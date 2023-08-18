@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "955636109694",
+    "firebase_url": "https://whatilove-d717d-default-rtdb.firebaseio.com",
+    "project_id": "whatilove-d717d",
+    "storage_bucket": "whatilove-d717d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955636109694:android:c3951235a1f4f3e80da32f",
+        "android_client_info": {
+          "package_name": "com.test.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955636109694-u54j3vg9l3g7ps65gl1d4b3336u3dcbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARcj_IlbKX8ulS5HL8i85ttopFGdrTWjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955636109694-u54j3vg9l3g7ps65gl1d4b3336u3dcbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

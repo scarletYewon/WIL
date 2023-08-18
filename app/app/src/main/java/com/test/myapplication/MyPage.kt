@@ -12,6 +12,7 @@ import android.text.style.RelativeSizeSpan
 import android.text.style.StyleSpan
 import android.util.Log
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -133,6 +134,12 @@ class MyPage : AppCompatActivity() {
 //
 //        slogun.text = builder
 //        name.text = builder2
+
+        val logo = findViewById<ImageView>(R.id.logo)
+        logo.setOnClickListener{
+            val intent = Intent(this,Main::class.java)
+            startActivity(intent)
+        }
 
         editbutton = findViewById(R.id.editbutton)
         editbutton.setOnClickListener {

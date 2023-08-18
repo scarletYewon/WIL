@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -86,6 +87,11 @@ class Modify : AppCompatActivity() {
 //        interesting=findViewById(R.id.interesting)
 
 
+        val logo = findViewById<ImageView>(R.id.logo)
+        logo.setOnClickListener{
+            val intent = Intent(this,Main::class.java)
+            startActivity(intent)
+        }
 
 
 

@@ -52,6 +52,8 @@ class LogIn : AppCompatActivity() {
             Toast.makeText(this, "회원가입 화면으로 이동합니다.", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
+            //애니메이션 추가
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_in_left)
         }
 
     }

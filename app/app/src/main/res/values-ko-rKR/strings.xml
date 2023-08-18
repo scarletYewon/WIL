@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">myPageProject</string>
+    <string name="name">이예원님,\n반갑습니다!</string>
+    <string name="editbutton">프로필 편집</string>
+    <string name="ID">아이디</string>
+    <string name="pass">비밀번호</string>
+    <string name="residence">거주지</string>
+    <string name="interesting">관심사</string>
+    <string name="mbti">mbti</string>
+    <string name="save">저장하기</string>
+</resources>

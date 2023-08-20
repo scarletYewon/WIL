@@ -6,36 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MyPage">
 
-    <TextView
+<!--    <TextView-->
 
+<!--        android:id="@+id/logo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="13dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:textSize="42sp"-->
+<!--        android:text="WIL"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/slogun"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="54dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:textSize="14sp"-->
+<!--        android:text="WhatILove"-->
+<!--        android:bufferType="spannable"-->
+<!--        android:textStyle="normal"-->
+<!--        android:gravity="center"-->
+<!--        />-->
+    <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="13dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="42sp"
-        android:text="WIL"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@color/black"
-        />
-    <TextView
-        android:id="@+id/slogun"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="54dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="14sp"
-        android:text="WhatILove"
-        android:bufferType="spannable"
-        android:textStyle="normal"
-        android:gravity="center"
-        />
-
+        app:layout_constraintEnd_toEndOf="parent"/>
     <View
         android:id="@+id/divider"
         android:layout_width="409dp"
@@ -249,7 +257,5 @@
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center"
         />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

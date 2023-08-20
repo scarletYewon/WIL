@@ -264,5 +264,4 @@
         tools:ignore="TouchTargetSizeCheck"
         android:elevation="5dp"
         android:background="@drawable/edit_text"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

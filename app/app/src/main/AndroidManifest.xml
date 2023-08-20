@@ -13,13 +13,25 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="33">
         <activity
+            android:name=".OnePost3"
+            android:exported="false" />
+        <activity
+            android:name=".OnePost2"
+            android:exported="false" />
+        <activity
+            android:name=".Topic3"
+            android:exported="false" />
+        <activity
+            android:name=".Topic2"
+            android:exported="false" />
+        <activity
             android:name=".Modify"
             android:exported="false" />
         <activity
             android:name=".MyPage"
             android:exported="false" />
         <activity
-            android:name=".Topic"
+            android:name=".Topic1"
             android:exported="false" />
         <activity
             android:name=".SignUp"
@@ -42,8 +54,7 @@
         </activity>
         <activity
             android:name=".NewPost"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".Main"
             android:exported="false">
@@ -53,13 +64,6 @@
         </activity>
         <activity
             android:name=".OnePost"
-            android:exported="false">
-        </activity>
-<!--        <activity-->
-<!--            android:name=".Test"-->
-<!--            android:label="Test"-->
-<!--            android:exported="true">-->
-<!--        </activity>-->
+            android:exported="false" />
     </application>
-
 </manifest>

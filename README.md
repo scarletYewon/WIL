@@ -28,7 +28,7 @@
 [https://youtu.be/cx0ZbiT-R-o](https://youtu.be/cx0ZbiT-R-o)
 
 # WireFrame
-
+![스크린샷 2023-08-20 오후 3 11 16](https://github.com/scarletYewon/WIL/assets/81704418/ca0ab626-f281-4d9e-b502-a13a6cce1c89)
 
 # Description
 

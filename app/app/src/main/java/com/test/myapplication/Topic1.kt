@@ -46,6 +46,13 @@ class Topic1 : AppCompatActivity() {
             val intent = Intent(this,MyPage::class.java)
             startActivity(intent)
         }
+
+        val home_btn = findViewById<ImageView>(R.id.imageView7)
+        home_btn.setOnClickListener {
+            val intent = Intent(this,Main::class.java)
+            startActivity(intent)
+        }
+
         //NEW
         val New_btn = findViewById<ImageView>(R.id.New_btn)
         New_btn.setOnClickListener {

@@ -15,6 +15,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/small_logo"/>
+        android:src="@drawable/logo"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

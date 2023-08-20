@@ -42,6 +42,14 @@ class OnePost : AppCompatActivity() {
             }
         })
 
+
+        val mypage_btn = findViewById<Button>(R.id.goMyPage)
+        mypage_btn.setOnClickListener {
+            Toast.makeText(this, "마이페이지로 이동합니다 ", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this,MyPage::class.java)
+            startActivity(intent)
+        }
+
         // 초기에는 댓글 입력 요소 및 댓글 표시를 보이지 않도록 설정
         tvName.visibility = View.GONE
         tvCommentShow.visibility = View.GONE

@@ -14,12 +14,16 @@ class NewPost : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_newpost)
 
-
-
-
         val title = findViewById<EditText>(R.id.et_title)
         val memo = findViewById<EditText>(R.id.et_memo)
         val post = findViewById<Button>(R.id.btn_post)
+
+        val mypage_btn = findViewById<Button>(R.id.goMyPage)
+        mypage_btn.setOnClickListener {
+            Toast.makeText(this, "마이페이지로 이동합니다 ", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this,MyPage::class.java)
+            startActivity(intent)
+        }
 
         // 제목과 내용 둘 중 하나라도 입력 안되면 토스트 메시지 띄우기
         post.setOnClickListener {

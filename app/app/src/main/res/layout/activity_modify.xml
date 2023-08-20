@@ -63,11 +63,11 @@
         android:layout_marginRight="29dp"
         android:contentDescription="GoMyPage"
         android:tooltipText="MyPage"
-        android:src="@drawable/profile"
+        android:src="@drawable/mypage"
+        android:background="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="21dp"
-        tools:ignore="TouchTargetSizeCheck"/>
+        android:layout_marginTop="21dp" />
 
     <de.hdodenhof.circleimageview.CircleImageView
 

@@ -39,6 +39,11 @@ class Topic3 : AppCompatActivity() {
         val edit_text1 = findViewById<TextView>(R.id.edit_text1) // 게시판 값 가져오기
         edit_text1.text = "패션게시판"
 
+        val home_btn = findViewById<ImageView>(R.id.imageView7)
+        home_btn.setOnClickListener {
+            val intent = Intent(this,Main::class.java)
+            startActivity(intent)
+        }
 
         //마이페이지
         val mypage_btn = findViewById<ImageView>(R.id.maypage_btn)

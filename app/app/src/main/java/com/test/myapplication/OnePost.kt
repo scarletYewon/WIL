@@ -43,6 +43,19 @@ class OnePost : AppCompatActivity() {
         }
 
 
+        //제목 데이터
+        val selectedItem = intent.getStringExtra("selectedItem")
+        val tv_title_onepost = findViewById<TextView>(R.id.tv_title_onepost)
+        tv_title_onepost.text = selectedItem
+        Log.e("sssss",selectedItem.toString())
+
+
+        //내용 데이터
+        val context = intent.getStringExtra("context")
+        val tv_memo_onepost = findViewById<TextView>(R.id.tv_memo_onepost)
+        tv_memo_onepost.text = context
+
+
         btnComment.setOnClickListener {
             val commentText = etComment.text.toString().trim()
             if (commentText.isNotEmpty()) {
@@ -50,12 +63,10 @@ class OnePost : AppCompatActivity() {
                 tvName.visibility = View.VISIBLE
                 tvCommentShow.visibility = View.VISIBLE
                 ivUser.visibility = View.VISIBLE
-
-//              // 비어있는 댓글 텍스트에 새로 입력한 댓글 표시
+                // 비어있는 댓글 텍스트에 새로 입력한 댓글 표시
                 val existingText = tvCommentShow.text.toString()
                 val newComment = "$existingText\n$commentText"
                 tvCommentShow.text = newComment
-
                 // 여기서 extras에 저장하는 부분도 추가 가능하나, 잘 안되는듯.. 보수 필요
                 intent.putExtra("comment", commentText)
                 setResult(Activity.RESULT_OK, intent)

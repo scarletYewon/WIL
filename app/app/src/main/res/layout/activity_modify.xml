@@ -154,12 +154,13 @@
         android:textColor="@color/black"
         />
 
-    <EditText
+    <TextView
+        android:textColor="@color/black"
         android:id="@+id/pass"
         android:layout_width="220dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="153dp"
-        android:layout_marginTop="369dp"
+        android:layout_marginTop="378dp"
         android:gravity="center"
         android:inputType="textPassword"
         android:text="password"
@@ -167,8 +168,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck"
-        android:background="@drawable/edittextborder"/>
+        tools:ignore="TouchTargetSizeCheck" />
     <TextView
         android:id="@+id/residenceTag"
         android:layout_width="78dp"
@@ -190,12 +190,12 @@
         android:layout_marginStart="152dp"
         android:layout_marginTop="444dp"
         android:gravity="center"
-        android:text ="경기도 구리~"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/edittextborder"/>
+        android:elevation="5dp"
+        android:background="@drawable/edit_text"/>
 
     <TextView
         android:id="@+id/interestingTag"
@@ -218,14 +218,14 @@
         android:layout_marginLeft="153dp"
         android:layout_marginTop="523dp"
         android:gravity="center"
-        android:text="운동,음악"
         android:textSize="20sp"
         android:textStyle="bold"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck"
-        android:background="@drawable/edittextborder"/>
+        android:elevation="5dp"
+        android:background="@drawable/edit_text"/>
     <TextView
         android:id="@+id/mbtiTag"
         android:layout_width="78dp"
@@ -247,13 +247,13 @@
         android:layout_marginLeft="153dp"
         android:layout_marginTop="600dp"
         android:gravity="center"
-        android:text="mbti"
         android:inputType="text"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck"
-        android:background="@drawable/edittextborder"/>
+        android:elevation="5dp"
+        android:background="@drawable/edit_text"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

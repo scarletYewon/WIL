@@ -8,4 +8,16 @@ data class Users(
     var loc:String = "location",
     var like:String = "interesting",
     var accept:Boolean
-)
+){
+    fun toMap(): Map<String, Any?> {
+        return mapOf(
+            "name" to name,
+            "id" to id,
+            "pw" to pw,
+            "mbti" to mbti,
+            "loc" to loc,
+            "like" to like,
+            "accept" to accept
+        )
+    }
+}

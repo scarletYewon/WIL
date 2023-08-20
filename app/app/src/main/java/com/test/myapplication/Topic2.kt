@@ -78,7 +78,7 @@ class Topic2 : AppCompatActivity() {
         UserList.add(Topic_Item("해외 팝송 best50",""))
         if (intent.getStringExtra("title")==null){
         } else{
-            UserList.add(Topic_Item(intent.getStringExtra("title"),""))
+            UserList.add(Topic_Item(intent.getStringExtra("title"),"context"))
         }
 
         TopicList.setOnItemClickListener { parent: AdapterView<*>, view: View, position: Int, id: Long ->

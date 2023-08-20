@@ -83,7 +83,7 @@ class Topic1 : AppCompatActivity() {
         UserList.add(Topic_Item("러닝 코스 best5",""))
         if (intent.getStringExtra("title")==null){
         } else{
-            UserList.add(Topic_Item(intent.getStringExtra("title"),""))
+            UserList.add(Topic_Item(intent.getStringExtra("title"),intent.getStringExtra("memo")))
         }
 
 

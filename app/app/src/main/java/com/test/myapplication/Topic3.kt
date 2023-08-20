@@ -81,7 +81,7 @@ class Topic3 : AppCompatActivity() {
         UserList.add(Topic_Item("계절별 best5 의상",""))
         if (intent.getStringExtra("title")==null){
         } else{
-            UserList.add(Topic_Item(intent.getStringExtra("title"),""))
+            UserList.add(Topic_Item(intent.getStringExtra("title"),"context"))
         }
 
         TopicList.setOnItemClickListener { parent: AdapterView<*>, view: View, position: Int, id: Long ->

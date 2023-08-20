@@ -11,6 +11,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import android.util.Log
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 
 class OnePost : AppCompatActivity() {
@@ -23,6 +28,19 @@ class OnePost : AppCompatActivity() {
         val tvCommentShow = findViewById<TextView>(R.id.tv_comment_show)
         val tvName = findViewById<TextView>(R.id.tv_name_onepost)
         val ivUser = findViewById<ImageView>(R.id.iv_user_onepost)
+
+        val uid = FirebaseAuth.getInstance().uid ?:""
+        val database = FirebaseDatabase.getInstance()
+        val myRef = database.reference
+        val currentUserDB = myRef.child("Users").child(uid)
+
+        currentUserDB.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                tvName.text = snapshot.child("name").value.toString()//이름 값 가져오기
+            }
+            override fun onCancelled(error: DatabaseError) {
+            }
+        })
 
         // 초기에는 댓글 입력 요소 및 댓글 표시를 보이지 않도록 설정
         tvName.visibility = View.GONE

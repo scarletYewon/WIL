@@ -150,8 +150,8 @@
     <TextView
         android:textColor="@color/black"
         android:id="@+id/passTag"
-        android:layout_width="78dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/pass"
         android:textSize="20sp"
         android:layout_marginTop="378dp"

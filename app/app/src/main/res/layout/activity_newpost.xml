@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewPost"
-    android:background="@color/white">
+    android:background="@color/white"
+    >
 
     <ImageView
         android:id="@+id/iv_logo"

@@ -6,36 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MyPage">
 
-    <TextView
+<!--    <TextView-->
 
+<!--        android:id="@+id/logo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="13dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:textSize="42sp"-->
+<!--        android:text="WIL"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/slogun"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="54dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:textSize="14sp"-->
+<!--        android:text="WhatILove"-->
+<!--        android:bufferType="spannable"-->
+<!--        android:textStyle="normal"-->
+<!--        android:gravity="center"-->
+<!--        />-->
+    <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="13dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="42sp"
-        android:text="WIL"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@color/black"
-        />
-    <TextView
-        android:id="@+id/slogun"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="54dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="14sp"
-        android:text="WhatILove"
-        android:bufferType="spannable"
-        android:textStyle="normal"
-        android:gravity="center"
-        />
-
+        app:layout_constraintEnd_toEndOf="parent"/>
     <View
         android:id="@+id/divider"
         android:layout_width="409dp"
@@ -53,11 +61,11 @@
         android:layout_marginRight="29dp"
         android:contentDescription="GoMyPage"
         android:tooltipText="MyPage"
-        android:src="@drawable/profile"
+        android:src="@drawable/mypage"
+        android:background="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="21dp"
-        tools:ignore="TouchTargetSizeCheck"/>
+        android:layout_marginTop="21dp" />
 
     <de.hdodenhof.circleimageview.CircleImageView
 
@@ -80,9 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="188dp"
         android:layout_marginTop="137dp"
-        android:lineSpacingMultiplier="0.8"
-        android:text="@string/name"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/black"/>
@@ -116,8 +122,8 @@
     <TextView
         android:textColor="@color/black"
         android:id="@+id/idTag"
-        android:layout_width="78dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/ID"
         android:textSize="20sp"
         android:layout_marginTop="301dp"
@@ -131,7 +137,6 @@
         android:id="@+id/id"
         android:layout_width="220dp"
         android:layout_height="30dp"
-        android:text="hellow world"
         android:textSize="20sp"
         android:layout_marginTop="301dp"
         android:layout_marginLeft="153dp"
@@ -143,8 +148,8 @@
     <TextView
         android:textColor="@color/black"
         android:id="@+id/passTag"
-        android:layout_width="78dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/pass"
         android:textSize="20sp"
         android:layout_marginTop="378dp"
@@ -163,7 +168,6 @@
         android:layout_marginTop="378dp"
         android:gravity="center"
         android:inputType="textPassword"
-        android:text="password"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -172,8 +176,8 @@
     <TextView
         android:textColor="@color/black"
         android:id="@+id/residenceTag"
-        android:layout_width="78dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/residence"
         android:textSize="20sp"
         android:layout_marginTop="455dp"
@@ -187,7 +191,6 @@
         android:id="@+id/residence"
         android:layout_width="220dp"
         android:layout_height="30dp"
-        android:text="경기도 구리~"
         android:textSize="20sp"
         android:layout_marginTop="455dp"
         android:layout_marginLeft="153dp"
@@ -199,8 +202,8 @@
     <TextView
         android:textColor="@color/black"
         android:id="@+id/interestingTag"
-        android:layout_width="78dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/interesting"
         android:textSize="20sp"
         android:layout_marginTop="532dp"
@@ -214,7 +217,6 @@
         android:id="@+id/interesting"
         android:layout_width="220dp"
         android:layout_height="30dp"
-        android:text="운동,음악"
         android:textSize="20sp"
         android:layout_marginTop="532dp"
         android:layout_marginLeft="153dp"
@@ -226,8 +228,8 @@
     <TextView
         android:textColor="@color/black"
         android:id="@+id/mbtiTag"
-        android:layout_width="78dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/mbti"
         android:textSize="20sp"
         android:layout_marginTop="609dp"
@@ -241,7 +243,6 @@
         android:id="@+id/mbti"
         android:layout_width="220dp"
         android:layout_height="30dp"
-        android:text="mbti"
         android:textSize="20sp"
         android:layout_marginTop="609dp"
         android:layout_marginLeft="153dp"
@@ -250,7 +251,5 @@
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center"
         />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

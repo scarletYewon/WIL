@@ -1,10 +1,16 @@
-# ❤️ What I Loved ❤️
+# ❤️ WIL : What I Loved ❤️
 
 간단한 로그인과 게시판 기능을 구현한 앱입니다.
+# Member
+- 류연주 : PM,Develop
+- 이예원 : Develop
+- 권경운 : Develop
+- 우재훈 : Develop
+- 이도연 : Develop
 
 # Environment
 
-- Kotlin
+- Kotlin 1.10.1
 - Android Studio
 - Firebase
 
